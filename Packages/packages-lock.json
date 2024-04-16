@@ -184,7 +184,7 @@
       "url": "https://packages.unity.com"
     },
     "org.nesnausk.gaussian-splatting": {
-      "version": "file:../../../package",
+      "version": "file:../External/package",
       "depth": 0,
       "source": "local",
       "dependencies": {
