@@ -1,31 +1,3 @@
-%YAML 1.1
-%TAG !u! tag:unity3d.com,2011:
---- !u!114 &11400000
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 33b71fae31e6c7d438e8566dc713e666, type: 3}
-  m_Name: gs_Planica_dji_0020-edit (1)
-  m_EditorClassIdentifier: 
-  m_FormatVersion: 20231020
-  m_SplatCount: 751243
-  m_BoundsMin: {x: -100.18366, y: -77.1813, z: -88.04617}
-  m_BoundsMax: {x: 94.229095, y: 56.084324, z: 116.93492}
-  m_DataHash:
-    serializedVersion: 2
-    Hash: a20809805c16f758d0bc153d23613ab1
-  m_PosFormat: 2
-  m_ScaleFormat: 3
-  m_SHFormat: 6
-  m_ColorFormat: 2
-  m_PosData: {fileID: 4900000, guid: 69b7fdc4b56843f429ac9c436c654744, type: 3}
-  m_ColorData: {fileID: 4900000, guid: 210df300a95b7f34ab58b8d39de3d53c, type: 3}
-  m_OtherData: {fileID: 4900000, guid: 4278acbc93c06e545bd8d808da9a29dd, type: 3}
-  m_SHData: {fileID: 4900000, guid: f9ed67a797ab35e43a9a85627129d63b, type: 3}
-  m_ChunkData: {fileID: 4900000, guid: 9162d0b3b8b2ff744bff0ee6702c1cdb, type: 3}
-  m_Cameras: []
+version https://git-lfs.github.com/spec/v1
+oid sha256:61602159e06aee50b07a4d0709aa3e25d68331c923ba4e7aa4c5f992ae043b6e
+size 1189
