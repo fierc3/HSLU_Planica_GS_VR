@@ -6,7 +6,7 @@ This project uses the Unity engine and utilizes the XR Interaction Toolkit and a
 
 - **Unity Engine**: The 3D engine used for the development.
 - **XR Interaction Toolkit (3.0.1)**: Provides tools and components for building immersive VR cross-platform interactions. Starter assets are included to make implementation more streamlined and more straightforward.
-- **Unity Gaussian Splatting Plugin**: This tool generates assets based on PLY files within Unity. For more information, check the plugin's official repository: [Unity Gaussian Splatting Plugin](https://github.com/aras-p/UnityGaussianSplatting).
+- **Unity Gaussian Splatting Plugin**: This tool generates assets based on PLY files within Unity and then renders those. For more information, check the plugin's official repository: [Unity Gaussian Splatting Plugin](https://github.com/aras-p/UnityGaussianSplatting).
 
 ## Tested On
 
