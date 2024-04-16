@@ -1,0 +1,31 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 33b71fae31e6c7d438e8566dc713e666, type: 3}
+  m_Name: gs_Planica_metaltower
+  m_EditorClassIdentifier: 
+  m_FormatVersion: 20231020
+  m_SplatCount: 724186
+  m_BoundsMin: {x: -100.379715, y: -110.363205, z: -188.92719}
+  m_BoundsMax: {x: 165.59312, y: 29.620367, z: 174.75978}
+  m_DataHash:
+    serializedVersion: 2
+    Hash: fab8f4b36a980376dba0b4229cbbde53
+  m_PosFormat: 2
+  m_ScaleFormat: 3
+  m_SHFormat: 6
+  m_ColorFormat: 2
+  m_PosData: {fileID: 4900000, guid: 73864fb520e698f4185c88e8573c41e3, type: 3}
+  m_ColorData: {fileID: 4900000, guid: e8d22586c094b1d41b81932f6c570c86, type: 3}
+  m_OtherData: {fileID: 4900000, guid: 5018d162e39727d4b91e1a7cad882b2c, type: 3}
+  m_SHData: {fileID: 4900000, guid: 94056521d47bc594c8c25c1ab37abb17, type: 3}
+  m_ChunkData: {fileID: 4900000, guid: f2e2b30e4b345c4498e853ff348428d8, type: 3}
+  m_Cameras: []

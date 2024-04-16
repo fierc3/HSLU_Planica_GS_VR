@@ -1,0 +1,31 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 33b71fae31e6c7d438e8566dc713e666, type: 3}
+  m_Name: gs_Planica_dji_0019_001-edit
+  m_EditorClassIdentifier: 
+  m_FormatVersion: 20231020
+  m_SplatCount: 944687
+  m_BoundsMin: {x: -40.232956, y: -19.731152, z: -43.340538}
+  m_BoundsMax: {x: 39.30547, y: 10.407462, z: 31.917974}
+  m_DataHash:
+    serializedVersion: 2
+    Hash: 858b2025abc07622047a41581bd7b00e
+  m_PosFormat: 2
+  m_ScaleFormat: 3
+  m_SHFormat: 6
+  m_ColorFormat: 2
+  m_PosData: {fileID: 4900000, guid: 71520bbe1a40c8d4ba62a368fc2fc3d3, type: 3}
+  m_ColorData: {fileID: 4900000, guid: bcd1ffd0f6f0bad42ad1afdb1d433288, type: 3}
+  m_OtherData: {fileID: 4900000, guid: ecfc6e7b35465e148ac0389ef5cc302c, type: 3}
+  m_SHData: {fileID: 4900000, guid: 7a10574e78d039a489359fecaa7f78ec, type: 3}
+  m_ChunkData: {fileID: 4900000, guid: eb071eef830317144bafa355e989a737, type: 3}
+  m_Cameras: []
