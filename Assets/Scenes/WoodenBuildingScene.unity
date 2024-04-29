@@ -547,12 +547,20 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: -9.71
       objectReference: {fileID: 0}
+    - target: {fileID: 3027231934152865102, guid: 32413647f33e47c448f7876dcd2969d6, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3438094606004272257, guid: 32413647f33e47c448f7876dcd2969d6, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3438094606004272257, guid: 32413647f33e47c448f7876dcd2969d6, type: 3}
       propertyPath: m_AnchorMin.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3465452684883965436, guid: 32413647f33e47c448f7876dcd2969d6, type: 3}
+      propertyPath: m_Enabled
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6272721666509766621, guid: 32413647f33e47c448f7876dcd2969d6, type: 3}
@@ -579,11 +587,54 @@ PrefabInstance:
       propertyPath: sceneName
       value: OverviewScene
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 3465452684883965436, guid: 32413647f33e47c448f7876dcd2969d6, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 3027231934152865102, guid: 32413647f33e47c448f7876dcd2969d6, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 3114490806374196330}
   m_SourcePrefab: {fileID: 100100000, guid: 32413647f33e47c448f7876dcd2969d6, type: 3}
+--- !u!1 &3114490806374196329 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3027231934152865102, guid: 32413647f33e47c448f7876dcd2969d6, type: 3}
+  m_PrefabInstance: {fileID: 3114490806374196328}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &3114490806374196330
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3114490806374196329}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_FontData:
+    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
+    m_FontSize: 14
+    m_FontStyle: 0
+    m_BestFit: 0
+    m_MinSize: 10
+    m_MaxSize: 40
+    m_Alignment: 4
+    m_AlignByGeometry: 0
+    m_RichText: 1
+    m_HorizontalOverflow: 0
+    m_VerticalOverflow: 0
+    m_LineSpacing: 1
+  m_Text: exit
 --- !u!1001 &3736873320660072059
 PrefabInstance:
   m_ObjectHideFlags: 0
