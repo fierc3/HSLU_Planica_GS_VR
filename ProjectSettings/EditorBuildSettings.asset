@@ -17,7 +17,11 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/WoodenBuildingScene.unity
     guid: d7f029e3ec435cc41aeecf382cdaffb6
+  - enabled: 1
+    path: Assets/Scenes/StageScene.unity
+    guid: 23572c5d64e570845bc9a90600cb0bb2
   m_configObjects:
     Unity.XR.Oculus.Settings: {fileID: 11400000, guid: 8a7435e8f71df424883bc9428f64e057, type: 2}
     com.unity.xr.management.loader_settings: {fileID: 11400000, guid: 9cc3e92e5687f044296bfd737f2eee02, type: 2}
     com.unity.xr.openxr.settings4: {fileID: 11400000, guid: 7d659987485a58941b2268cc733c8d05, type: 2}
+    xr.sdk.mock-hmd.settings: {fileID: 11400000, guid: 6cdf0e63ed2b03b4cbd84eef2976bb5b, type: 2}
