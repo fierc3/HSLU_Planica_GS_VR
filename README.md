@@ -16,8 +16,12 @@ This project uses the Unity engine and utilizes the XR Interaction Toolkit and a
 - **Unity**: Exact version used is 2022.3.10f1
 
 ## Demo
+**Watch a demonstration of the project as of 30th April 2024:**
 
-Watch a demonstration of the project as of 16th April 2024:
+[![Demo Video](https://img.youtube.com/vi/L9a29qS8YYY/0.jpg)](https://www.youtube.com/watch?v=L9a29qS8YYY)
+
+**Watch a demonstration of the project as of 16th April 2024:**
+
 [![Demo Video](https://img.youtube.com/vi/mFlTdvBfWRY/0.jpg)](https://www.youtube.com/watch?v=mFlTdvBfWRY)
 
 ## Installation
