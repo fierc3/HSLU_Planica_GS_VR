@@ -229,6 +229,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: BoundingBox
       objectReference: {fileID: 0}
+    - target: {fileID: 1963016562159418155, guid: 49f9cc472d59e0d46b570d06ad2f1bbe, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0.34
+      objectReference: {fileID: 0}
+    - target: {fileID: 1963016562159418155, guid: 49f9cc472d59e0d46b570d06ad2f1bbe, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 3.29
+      objectReference: {fileID: 0}
     - target: {fileID: 2679154389116473223, guid: 49f9cc472d59e0d46b570d06ad2f1bbe, type: 3}
       propertyPath: m_LocalScale.x
       value: 2.4989965
@@ -280,6 +288,14 @@ PrefabInstance:
     - target: {fileID: 2679154389116473223, guid: 49f9cc472d59e0d46b570d06ad2f1bbe, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2886076748875732039, guid: 49f9cc472d59e0d46b570d06ad2f1bbe, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.5509485
+      objectReference: {fileID: 0}
+    - target: {fileID: 2886076748875732039, guid: 49f9cc472d59e0d46b570d06ad2f1bbe, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0.029998
       objectReference: {fileID: 0}
     - target: {fileID: 4364812279036663494, guid: 49f9cc472d59e0d46b570d06ad2f1bbe, type: 3}
       propertyPath: m_LocalPosition.y
@@ -437,7 +453,7 @@ Transform:
   m_GameObject: {fileID: 834959225}
   serializedVersion: 2
   m_LocalRotation: {x: 0.7114271, y: 0.034261014, z: -0.033764247, w: 0.70111173}
-  m_LocalPosition: {x: -4.06, y: -3.26, z: 2.18}
+  m_LocalPosition: {x: -3.876, y: -3.26, z: 1.865}
   m_LocalScale: {x: -3.028311, y: 3.5650012, z: 13.61151}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -740,7 +756,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c12d929a7f62c48adbe9ff45c9a33ff0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_Asset: {fileID: 11400000, guid: a1bb5e5d859755c488a6c9bdbfbb5db7, type: 2}
+  m_Asset: {fileID: 11400000, guid: df9a44655317ab0448f52dd38a3b2a87, type: 2}
   m_SplatScale: 1
   m_OpacityScale: 1
   m_SHOrder: 3
