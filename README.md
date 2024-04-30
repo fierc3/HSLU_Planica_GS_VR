@@ -12,7 +12,7 @@ This project uses the Unity engine and utilizes the XR Interaction Toolkit and a
 
 - **Meta Quest 3**: This project has been thoroughly tested on the Meta Quest 3 VR headset to ensure compatibility and performance.
 - **Meta Quest 2**: All features have been co-tested on a Meta Quest 2
-- **Mock HMD**: MockHMD can be used for easy testing in Unity. This allows to quickly test interactions with mouse and keyboard
+- **Mock HMD**: MockHMD can be used for easy testing in Unity. This allows to quickly test interactions with mouse and keyboard. If the Mock HMD is causing problems feel free to disable it in the project settings.
 - **Unity**: Exact version used is 2022.3.10f1
 
 ## Demo
