@@ -1,6 +1,6 @@
 name: Release 😎
 
-on: [release]
+on: [workflow_dispatch, release]
 
 jobs:
   build:
