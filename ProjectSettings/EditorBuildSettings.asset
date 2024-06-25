@@ -6,23 +6,29 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/OverviewScene.unity
+    path: Assets/Scenes/Immersive/OverviewScene.unity
     guid: ca13622d0f7f243a3a3020f3b8b0650f
   - enabled: 1
-    path: Assets/Scenes/MetalTowerScene.unity
+    path: Assets/Scenes/Immersive/MetalTowerScene.unity
     guid: 1d1d181ec030dfe48b910e6058807696
   - enabled: 1
-    path: Assets/Scenes/RoundBuildingScene.unity
+    path: Assets/Scenes/Immersive/RoundBuildingScene.unity
     guid: a00da23b5e0cb414d98ed981ce4dfa94
   - enabled: 1
-    path: Assets/Scenes/WoodenBuildingScene.unity
+    path: Assets/Scenes/Immersive/WoodenBuildingScene.unity
     guid: d7f029e3ec435cc41aeecf382cdaffb6
   - enabled: 1
-    path: Assets/Scenes/StageScene.unity
+    path: Assets/Scenes/Immersive/StageScene.unity
     guid: 23572c5d64e570845bc9a90600cb0bb2
   - enabled: 1
-    path: Assets/Scenes/ArenaScene.unity
+    path: Assets/Scenes/Immersive/ArenaScene.unity
     guid: bae35a2918559714fb434bf3929e5992
+  - enabled: 1
+    path: Assets/Scenes/MainMenuScene.unity
+    guid: 35d9f7dcbfa2b0e45855f432cbfb0162
+  - enabled: 1
+    path: Assets/Scenes/BTS/BtsScene.unity
+    guid: 694b6436889cf7d4fafdf87b005cfd46
   m_configObjects:
     Unity.XR.Oculus.Settings: {fileID: 11400000, guid: 8a7435e8f71df424883bc9428f64e057, type: 2}
     com.unity.xr.management.loader_settings: {fileID: 11400000, guid: 9cc3e92e5687f044296bfd737f2eee02, type: 2}
