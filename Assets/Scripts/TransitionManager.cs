@@ -6,6 +6,8 @@ public class TransitionManager : MonoBehaviour
 {
 
     private Globals globals;
+    [SerializeField]
+    private bool SkipTransition = false;
 
     private void OnEnable()
     {
@@ -20,6 +22,7 @@ public class TransitionManager : MonoBehaviour
         EventManager.RevealPlayer -= RevealPlayerHandler;
     }
 
+
     private void HidePlayerHandler()
     {
         globals.Mode = Mode.NonInteractive;
@@ -30,7 +33,14 @@ public class TransitionManager : MonoBehaviour
     {
         globals.Mode = Mode.NonInteractive;
         Debug.Log("stargin reveal animation");
-        StartCoroutine(PlayAnimation(0f, 1f));
+        if (SkipTransition)
+        {
+            StartCoroutine(PlayAnimation(1f, 1.1f));
+        }
+        else
+        {
+            StartCoroutine(PlayAnimation(0f, 1f));
+        }
     }
 
     IEnumerator PlayAnimation(float initial, float target)
@@ -64,5 +74,4 @@ public class TransitionManager : MonoBehaviour
             EventManager.FireHideCompleteEvent();
         }
     }
-
 }
