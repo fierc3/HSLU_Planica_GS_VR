@@ -7,7 +7,7 @@
     "com.unity.xr.mock-hmd": "1.3.1-preview.1",
     "com.unity.xr.oculus": "4.2.0",
     "com.unity.xr.openxr": "1.10.0",
-    "org.nesnausk.gaussian-splatting": "file:../External/package",
+    "org.irchslu.gaussian-splatting": "https://github.com/irc-hslu/UnityGaussianSplatting.git?path=/package",
     "com.unity.modules.ai": "1.0.0",
     "com.unity.modules.androidjni": "1.0.0",
     "com.unity.modules.animation": "1.0.0",
