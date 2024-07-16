@@ -29,6 +29,9 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/BTS/BtsScene.unity
     guid: 694b6436889cf7d4fafdf87b005cfd46
+  - enabled: 1
+    path: Assets/Scenes/Inspect/InspectScene.unity
+    guid: f73c1190bf777824cb797e468bc2df7b
   m_configObjects:
     Unity.XR.Oculus.Settings: {fileID: 11400000, guid: 8a7435e8f71df424883bc9428f64e057, type: 2}
     com.unity.xr.management.loader_settings: {fileID: 11400000, guid: 9cc3e92e5687f044296bfd737f2eee02, type: 2}
