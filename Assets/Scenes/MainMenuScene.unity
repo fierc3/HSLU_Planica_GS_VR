@@ -902,7 +902,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8289365818771205662, guid: 32413647f33e47c448f7876dcd2969d6, type: 3}
       propertyPath: sceneName
-      value: OverviewScene
+      value: InspectScene
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
