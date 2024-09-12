@@ -26,7 +26,10 @@ This project uses the Unity engine and utilizes the XR Interaction Toolkit and a
 
 ## Installation
 
-To run this project locally, clone the repository to your machine and open it with Unity. Ensure you have the XR Interaction Toolkit and the Gaussian Splatting Plugin installed in your Unity environment.
+To run this project locally, clone the repository to your machine and open it with Unity. Ensure you have the XR Interaction Toolkit, [VologramsToolkit](https://github.com/Volograms/volograms_unity_plugin/releases) and the Gaussian Splatting Plugin installed in your Unity environment.
 
 ```bash
 git clone <repository-url>
+````
+
+The VologramsToolkit might have to be downloaded separately via the [Release-Page](https://github.com/Volograms/volograms_unity_plugin/releases).
