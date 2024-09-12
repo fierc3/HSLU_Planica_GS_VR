@@ -894,6 +894,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   SkipTransition: 0
+  Delay: 1
+  Duration: 1
+  FromValue: 0
+  ToValue: 1
 --- !u!1 &6234080260099021787
 GameObject:
   m_ObjectHideFlags: 0

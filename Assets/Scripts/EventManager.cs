@@ -13,6 +13,7 @@ public class EventManager : MonoBehaviour
     public static event ActionEvent RevealPlayer;
     public static event ActionEvent HideComplete;
     public static event Action<string> SwitchScene;
+    public static event Action<int> DisplayTutorial;
 
     private void Awake()
     {
@@ -46,5 +47,10 @@ public class EventManager : MonoBehaviour
     public static void FireHideCompleteEvent()
     {
         HideComplete?.Invoke();
+    }
+
+    public static void FireDisplayTutorial(int id)
+    {
+        DisplayTutorial?.Invoke(id);
     }
 }
