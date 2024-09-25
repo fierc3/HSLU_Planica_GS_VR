@@ -33,3 +33,7 @@ git clone <repository-url>
 ````
 
 The VologramsToolkit might have to be downloaded separately via the [Release-Page](https://github.com/Volograms/volograms_unity_plugin/releases).
+
+
+### Credits
+<a href="https://www.flaticon.com/free-icons/arrow" title="arrow icons">Arrow icons created by Freepik - Flaticon</a>
