@@ -16,3 +16,4 @@ public enum Mode
     NonInteractive,
     Interactive
 }
+

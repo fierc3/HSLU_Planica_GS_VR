@@ -1,25 +1,28 @@
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
+using TMPro;
+using Unity.XR.Oculus;
 using UnityEngine;
 using UnityEngine.Splines;
-using static UnityEngine.GraphicsBuffer;
+using UnityEngine.UI;
 
 public class BalloonTransporter : MonoBehaviour
 {
-    IEnumerable<GameObject> splats;
-    bool rightArrowPressed = false;
-    bool rightTriggered = false;
-    bool singleTriggered = false;
-    Vector3 originalPosition;
-    Quaternion originalRotation;
+    bool qPressed = false;
+    bool qTriggered = false;
+    bool isGoing = false;
 
     // Teleporting
     Globals globals;
+
+    // read only in inscpetor
     private string sceneName = "InspectScene";
+    [SerializeField]
+    private int active = 0;
 
     [SerializeField]
-    int active = 0;
+    private List<LocationInformation> locations;
 
     // Portal attributes
     [SerializeField]
@@ -37,70 +40,102 @@ public class BalloonTransporter : MonoBehaviour
     [SerializeField]
     private SplineAnimate splineAnimate;
 
+    // Screen
+    [SerializeField]
+    private TextMeshProUGUI title;
+    [SerializeField]
+    private TextMeshProUGUI description;
+    [SerializeField]
+    private Image image;
+
+    // Hot Air Balloon
+    [SerializeField]
+    private GameObject hotAirBalloon;
+
     // Start is called before the first frame update
     void Start()
     {
         this.globals = GameObject.FindGameObjectWithTag("Globals").GetComponent<Globals>();
-        return;
-        splats = GameObject.FindGameObjectsWithTag("InspectorSplat");
-        Debug.Log("Splats: " + splats.Count());
-        foreach (GameObject go in splats)
-        {
-            go.SetActive(false);
-        }
-        Debug.Log("Activating first find: " + splats.First().name);
-        splats.First().SetActive(true);
-        Debug.Log(splats.First().GetComponentInParent<Transform>().name);
-        originalPosition = splats.First().transform.parent.parent.transform.position;
-        originalRotation = splats.First().transform.parent.parent.transform.rotation;
+        var activeScene = UnityEngine.SceneManagement.SceneManager.GetActiveScene();
+        locations = locations.Where(x => !x.id.Equals(activeScene.name)).ToList();
+        UpdateScreen();
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (singleTriggered) return;
+        if (isGoing) return;
 
-        if (Input.GetKeyDown(KeyCode.RightArrow)) // Detect right arrow key press
+        if (Input.GetKeyDown(KeyCode.LeftArrow))
         {
-            rightArrowPressed = true;
-        }
-        else if (Input.GetKeyUp(KeyCode.RightArrow)) // Detect right arrow key release
-        {
-            rightArrowPressed = false;
-            rightTriggered = false;
+            Previous();
         }
 
-        if (rightArrowPressed && !rightTriggered)
+        if (Input.GetKeyDown(KeyCode.RightArrow))
         {
-            rightTriggered = true;
-            NextSplat();
+            Next();
         }
 
-        if (Input.GetKeyDown(KeyCode.UpArrow)) // Detect right arrow key press
+
+        if (Input.GetKeyDown(KeyCode.Q)) // Detect right arrow key press
         {
-            ResetSplat();
+            qPressed = true;
+        }
+        else if (Input.GetKeyUp(KeyCode.Q)) // Detect right arrow key release
+        {
+            qPressed = false;
+            qTriggered = false;
+        }
+
+        if (qPressed && !qTriggered)
+        {
+            qTriggered = true;
+            GoToScene();
         }
     }
 
-
-    public void NextSplat()
+    public void Next()
     {
-        singleTriggered = true;
-        Debug.Log("Next Splat Please: " + active);
+        Debug.Log("Next: " + active);
+        active = (active + 1) % locations.Count();
+        sceneName = locations[active].id;
+        UpdateScreen();
+    }
+
+    public void Previous()
+    {
+        Debug.Log("Previous: " + active);
+        active = (active - 1 + locations.Count) % locations.Count;
+        sceneName = locations[active].id;
+        UpdateScreen();
+    }
+
+    private void UpdateScreen()
+    {
+        title.SetText(locations[active].text);
+        description.SetText(locations[active].additionalText);
+        image.sprite = locations[active].image;
+    }
+
+
+    public void GoToScene()
+    {
+        if (isGoing)
+        {
+            Debug.Log("Not triggering transition again because were already on the way");
+            return;
+        }
+
+        isGoing = true;
+
+        if(this.splineAnimate == null)
+        {
+            GoToLocation();
+        }
+
         this.splineAnimate.Pause();
         StartCoroutine(ShowPortal());
         StartCoroutine(MoveToTarget());
-        return;
-        splats.ElementAt(active).SetActive(false);
-        active = (active + 1) % splats.Count();
-        splats.ElementAt(active).SetActive(true);
-    }
-
-    public void ResetSplat()
-    {
-        Debug.Log("Reseting Splats Container " + originalPosition);
-        splats.First().transform.parent.parent.transform.position = originalPosition;
-        splats.First().transform.parent.parent.transform.rotation = originalRotation;
     }
 
     private IEnumerator ShowPortal()
@@ -121,7 +156,7 @@ public class BalloonTransporter : MonoBehaviour
 
     private IEnumerator MoveToTarget()
     {
-        Vector3 startPosition = transform.position;
+        Vector3 startPosition = hotAirBalloon.transform.position;
         Vector3 endPosition = portal.gameObject.transform.position;
         float timeElapsed = 0f;
 
@@ -131,14 +166,14 @@ public class BalloonTransporter : MonoBehaviour
             float t = timeElapsed / moveDuration;
 
             Vector3 curvePosition = (1 - t) * (1 - t) * startPosition + 2 * (1 - t) * t * portal.gameObject.transform.position + t * t * endPosition;
-            transform.position = curvePosition;
+            hotAirBalloon.transform.position = curvePosition;
 
-            Vector3 direction = (endPosition - transform.position).normalized;
+            Vector3 direction = (endPosition - hotAirBalloon.transform.position).normalized;
             direction.y = 0; // Keep the y component zero to avoid tilting up or down
             Quaternion lookRotation = Quaternion.LookRotation(direction);
-            transform.rotation = Quaternion.Slerp(transform.rotation, lookRotation, Time.deltaTime * (1 / duration));
+            transform.rotation = Quaternion.Slerp(hotAirBalloon.transform.rotation, lookRotation, Time.deltaTime * (1 / duration));
 
-            if(Vector3.Distance(transform.position, endPosition) < 5)
+            if(Vector3.Distance(hotAirBalloon.transform.position, endPosition) < 5)
             {
                 GoToLocation();
                 yield break;
@@ -148,10 +183,10 @@ public class BalloonTransporter : MonoBehaviour
         }
 
         // Ensure the object reaches the exact target position at the end
-        transform.position = endPosition;
+        hotAirBalloon.transform.position = endPosition;
     }
 
-    public void GoToLocation()
+    private void GoToLocation()
     {
         EventManager.HideComplete += OnHidden;
         globals.Mode = Mode.NonInteractive;
@@ -164,5 +199,4 @@ public class BalloonTransporter : MonoBehaviour
         Debug.Log("OnHidden for " + sceneName);
         EventManager.FireSwitchSceneEvent(sceneName);
     }
-
 }
