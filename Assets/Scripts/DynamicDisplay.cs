@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -18,7 +19,16 @@ public class DynamicDisplay : MonoBehaviour
 
     private void OnTutorial(int id)
     {
-        StopAllCoroutines();
+        try
+        {
+            StopAllCoroutines();
+        }
+        catch (Exception e)
+        {
+            Debug.LogWarning("No coroutines to stop: " + e.Message);
+            return;
+        }
+
 
         Debug.Log("On tutorial "  + id);
         if(id == tutorialId)
@@ -34,7 +44,7 @@ public class DynamicDisplay : MonoBehaviour
     public IEnumerator FadeCanvasGroup(bool fadeIn)
     {
         float startAlpha = fadeIn ? 0 : canvasGroup.alpha;
-        float endAlpha = fadeIn ? 1 : 0;
+        float endAlpha = fadeIn ? 1 : 0.00f;
         float rate = 1.0f / fadeDuration;
         float progress = 0.0f;
 

@@ -52,6 +52,9 @@ public class BalloonTransporter : MonoBehaviour
     [SerializeField]
     private GameObject hotAirBalloon;
 
+    [SerializeField]
+    private CanvasGroup travelIndicator;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -127,8 +130,9 @@ public class BalloonTransporter : MonoBehaviour
         }
 
         isGoing = true;
+        travelIndicator.gameObject.SetActive(true);
 
-        if(this.splineAnimate == null)
+        if (this.splineAnimate == null)
         {
             GoToLocation();
         }
@@ -171,7 +175,7 @@ public class BalloonTransporter : MonoBehaviour
             Vector3 direction = (endPosition - hotAirBalloon.transform.position).normalized;
             direction.y = 0; // Keep the y component zero to avoid tilting up or down
             Quaternion lookRotation = Quaternion.LookRotation(direction);
-            transform.rotation = Quaternion.Slerp(hotAirBalloon.transform.rotation, lookRotation, Time.deltaTime * (1 / duration));
+           // transform.rotation = Quaternion.Slerp(hotAirBalloon.transform.rotation, lookRotation, Time.deltaTime * (1 / duration));
 
             if(Vector3.Distance(hotAirBalloon.transform.position, endPosition) < 5)
             {
