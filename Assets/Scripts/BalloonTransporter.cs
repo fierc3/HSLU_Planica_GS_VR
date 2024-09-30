@@ -123,7 +123,7 @@ public class BalloonTransporter : MonoBehaviour
 
     public void GoToScene()
     {
-        if (isGoing)
+        if (isGoing || Time.timeScale < 1f)
         {
             Debug.Log("Not triggering transition again because were already on the way");
             return;
