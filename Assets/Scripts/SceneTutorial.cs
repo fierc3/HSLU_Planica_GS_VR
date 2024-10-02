@@ -22,9 +22,9 @@ public class SceneTutorial : MonoBehaviour
 
         var count = PlayerPrefs.GetInt(category.ToString());
         PlayerPrefs.SetInt(category.ToString(), count + 1);
-        if (count > 100000)
+        if (count > 0)
         {
-            Destroy(gameObject);
+            FinishTutorial();
             return;
         }
 
@@ -34,6 +34,12 @@ public class SceneTutorial : MonoBehaviour
     }
 
     public void ConfirmButtonPressed()
+    {
+        Debug.Log("Confirm button pressed");
+        FinishTutorial();
+    }
+
+    private void FinishTutorial()
     {
         SetPlayOnAllSplines(true);
         SetPlayOnHoverboards(true);

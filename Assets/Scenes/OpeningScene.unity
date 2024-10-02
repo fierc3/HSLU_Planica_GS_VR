@@ -659,7 +659,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4736824462062461832, guid: fd28f23af44f73f4a95e33435872ad15, type: 3}
       propertyPath: m_Text
-      value: Are you ready to start the experience?
+      value: Calibration complete!
       objectReference: {fileID: 0}
     - target: {fileID: 4950580794031056704, guid: fd28f23af44f73f4a95e33435872ad15, type: 3}
       propertyPath: m_AnchorMax.y
@@ -793,6 +793,14 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.x
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7915967369019904793, guid: fd28f23af44f73f4a95e33435872ad15, type: 3}
+      propertyPath: m_Text
+      value: I'm ready!
+      objectReference: {fileID: 0}
+    - target: {fileID: 8121514179676499644, guid: fd28f23af44f73f4a95e33435872ad15, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 233.6
+      objectReference: {fileID: 0}
     - target: {fileID: 8180815008627773159, guid: fd28f23af44f73f4a95e33435872ad15, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
@@ -875,8 +883,8 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8908833148325884413, guid: fd28f23af44f73f4a95e33435872ad15, type: 3}
       propertyPath: m_Text
-      value: You can interact with objects and buttons by aiming at the target and
-        pressing the trigger on your right hand. Press this button to start the experience!
+      value: Everything is set up and ready to go! Press the button below with the
+        trigger on your controller to start the experience.
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects:
