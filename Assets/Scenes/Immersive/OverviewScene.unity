@@ -886,6 +886,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   category: 1
+  PostTutorialVolumetricVideo: {fileID: 215132229}
 --- !u!1 &80055556
 GameObject:
   m_ObjectHideFlags: 0
@@ -985,6 +986,17 @@ Transform:
   - {fileID: 1584203699}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 178.4, y: -95, z: 6.1629944}
+--- !u!114 &215132229 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 3822362778757931557, guid: 4896814416a7f0a439c99da6c854955d, type: 3}
+  m_PrefabInstance: {fileID: 618306943086984903}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 80afb95fd2a7d4b61a25a2ca9037c5a4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &231550833
 GameObject:
   m_ObjectHideFlags: 0
@@ -2755,13 +2767,29 @@ PrefabInstance:
       propertyPath: m_AlignmentMode
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3822362778757931557, guid: 4896814416a7f0a439c99da6c854955d, type: 3}
+      propertyPath: playOnStart
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4360984300616722958, guid: 4896814416a7f0a439c99da6c854955d, type: 3}
       propertyPath: portal
       value: 
       objectReference: {fileID: 1000634299}
+    - target: {fileID: 6393330456927424658, guid: 4896814416a7f0a439c99da6c854955d, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6514122752168376833, guid: 4896814416a7f0a439c99da6c854955d, type: 3}
       propertyPath: m_Name
       value: AirBalloon
+      objectReference: {fileID: 0}
+    - target: {fileID: 6651183974833249210, guid: 4896814416a7f0a439c99da6c854955d, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7218354621372526253, guid: 4896814416a7f0a439c99da6c854955d, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8230439536493913885, guid: 4896814416a7f0a439c99da6c854955d, type: 3}
       propertyPath: m_LocalRotation.w
@@ -2798,6 +2826,7 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects:
     - {fileID: 2466969976644474339, guid: 4896814416a7f0a439c99da6c854955d, type: 3}
+    - {fileID: 6015561909676218867, guid: 4896814416a7f0a439c99da6c854955d, type: 3}
     m_AddedGameObjects:
     - targetCorrespondingSourceObject: {fileID: 8230439536493913885, guid: 4896814416a7f0a439c99da6c854955d, type: 3}
       insertIndex: 0

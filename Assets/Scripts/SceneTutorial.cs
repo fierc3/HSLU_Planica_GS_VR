@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.XR.CoreUtils;
 using UnityEngine;
 using UnityEngine.Splines;
 
@@ -9,6 +10,9 @@ public class SceneTutorial : MonoBehaviour
     private PreferenceCategory category;
     private SplineAnimate[] splineAnimates;
     private HoverboardController[] hoverboards;
+
+    [SerializeField]
+    private VolPlayer PostTutorialVolumetricVideo;
 
     // Start is called before the first frame update
     void Start()
@@ -26,13 +30,19 @@ public class SceneTutorial : MonoBehaviour
 
         SetPlayOnAllSplines(false);
         SetPlayOnHoverboards(false);
-        Time.timeScale = 0.8f;
+        Time.timeScale = 0.99f;
     }
 
     public void ConfirmButtonPressed()
     {
         SetPlayOnAllSplines(true);
         SetPlayOnHoverboards(true);
+
+        if (PostTutorialVolumetricVideo)
+        {
+            PostTutorialVolumetricVideo.gameObject.SetActive(true);
+        }
+
         Time.timeScale = 1.0f;
         Destroy(gameObject);
     }
@@ -49,7 +59,8 @@ public class SceneTutorial : MonoBehaviour
     {
         foreach (var board in this.hoverboards)
         {
-            board.gameObject.SetActive(play);
+            //board.gameObject.SetActive(play);
+            board.enabled = play;
         }
     }
 
