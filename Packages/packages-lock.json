@@ -220,7 +220,7 @@
       "url": "https://packages.unity.com"
     },
     "org.irchslu.gaussian-splatting": {
-      "version": "https://github.com/irc-hslu/UnityGaussianSplatting.git?path=/package#v0.8.2",
+      "version": "https://github.com/irc-hslu/UnityGaussianSplatting.git?path=/package",
       "depth": 0,
       "source": "git",
       "dependencies": {
@@ -228,7 +228,7 @@
         "com.unity.collections": "2.1.4",
         "com.unity.mathematics": "1.2.6"
       },
-      "hash": "41cf040a48c52a1b2fd92c0cc2d824809dfcbb5a"
+      "hash": "222dc24dcff21d8ddda236edab3cc93e08478a7a"
     },
     "com.unity.modules.ai": {
       "version": "1.0.0",
