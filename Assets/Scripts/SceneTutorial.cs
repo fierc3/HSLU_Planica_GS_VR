@@ -24,7 +24,11 @@ public class SceneTutorial : MonoBehaviour
         PlayerPrefs.SetInt(category.ToString(), count + 1);
         if (count > 0)
         {
-            FinishTutorial();
+            foreach (var board in this.hoverboards)
+            {
+                board.gameObject.SetActive(false);
+            }
+            Destroy(gameObject);
             return;
         }
 
@@ -65,14 +69,7 @@ public class SceneTutorial : MonoBehaviour
     {
         foreach (var board in this.hoverboards)
         {
-            //board.gameObject.SetActive(play);
             board.enabled = play;
         }
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
     }
 }
