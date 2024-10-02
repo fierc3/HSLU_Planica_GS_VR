@@ -1569,7 +1569,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   moveDuration: 2
   yMovement: 0.42
-  upDelay: 30
+  upDelay: 1
   downDelay: 144
   player: {fileID: 764268907}
 --- !u!1 &805469842
@@ -3155,6 +3155,10 @@ PrefabInstance:
     - target: {fileID: 1704414655395997036, guid: 4896814416a7f0a439c99da6c854955d, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2578537843683527018, guid: 4896814416a7f0a439c99da6c854955d, type: 3}
+      propertyPath: Delay
+      value: 30
       objectReference: {fileID: 0}
     - target: {fileID: 2905404562485066807, guid: 4896814416a7f0a439c99da6c854955d, type: 3}
       propertyPath: m_Target

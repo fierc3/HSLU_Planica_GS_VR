@@ -29,16 +29,19 @@ public class DelayedMonitorMove : MonoBehaviour
     {
         yield return new WaitForSeconds(upDelay);
 
-        player.Play();
-        
-        // Move up smoothly
-        yield return StartCoroutine(MoveToPosition(targetPosition, moveDuration));
+        if (player.gameObject.activeInHierarchy)
+        {
+            player.Play();
 
-        yield return new WaitForSeconds(downDelay);
+            // Move up smoothly
+            yield return StartCoroutine(MoveToPosition(targetPosition, moveDuration));
 
-        // Move down smoothly
-        yield return StartCoroutine(MoveToPosition(originalPosition, moveDuration));
-        player.Stop();
+            yield return new WaitForSeconds(downDelay);
+
+            // Move down smoothly
+            yield return StartCoroutine(MoveToPosition(originalPosition, moveDuration));
+            player.Stop();
+        }
     }
 
     IEnumerator MoveToPosition(Vector3 target, float duration)

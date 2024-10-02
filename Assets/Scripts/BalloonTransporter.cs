@@ -125,7 +125,7 @@ public class BalloonTransporter : MonoBehaviour
     {
         if (isGoing || Time.timeScale < 1f)
         {
-            Debug.Log("Not triggering transition again because were already on the way");
+            Debug.Log("Not triggering transition again because were already on the way, isgoing: " + isGoing + " timescale: " + Time.timeScale);
             return;
         }
 

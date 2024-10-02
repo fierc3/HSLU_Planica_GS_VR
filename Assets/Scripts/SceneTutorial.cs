@@ -43,7 +43,7 @@ public class SceneTutorial : MonoBehaviour
         FinishTutorial();
     }
 
-    private void FinishTutorial()
+    public void FinishTutorial()
     {
         SetPlayOnAllSplines(true);
         SetPlayOnHoverboards(true);
