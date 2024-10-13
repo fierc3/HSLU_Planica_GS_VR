@@ -18,6 +18,9 @@ public class DelayedMonitorMove : MonoBehaviour
     [SerializeField]
     private VideoPlayer player;
 
+    [SerializeField]
+    private AudioClip moveSound;
+
     void Start()
     {
         originalPosition = transform.localPosition;
@@ -48,6 +51,7 @@ public class DelayedMonitorMove : MonoBehaviour
     {
         Vector3 start = transform.localPosition;
         float elapsed = 0;
+        SoundManager.Instance.PlaySound(moveSound, transform);
 
         while (elapsed < duration)
         {

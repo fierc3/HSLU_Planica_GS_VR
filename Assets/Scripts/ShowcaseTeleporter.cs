@@ -7,6 +7,9 @@ public class ShowcaseTeleporter : MonoBehaviour
     [SerializeField] 
     string sceneName;
 
+    [SerializeField]
+    private AudioClip buttonClickSound;
+
 
     private Globals globals;
     // Start is called before the first frame update
@@ -27,6 +30,7 @@ public class ShowcaseTeleporter : MonoBehaviour
 
     public void GoToLocation()
     {
+        SoundManager.Instance.PlaySound(buttonClickSound, transform);
         EventManager.HideComplete += OnHidden;
         globals.Mode = Mode.NonInteractive;
         EventManager.FireHideEvent();
@@ -39,3 +43,4 @@ public class ShowcaseTeleporter : MonoBehaviour
         EventManager.FireSwitchSceneEvent(sceneName);
     }
 }
+

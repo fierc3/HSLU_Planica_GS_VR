@@ -954,6 +954,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   sceneName: OverviewScene
+  buttonClickSound: {fileID: 8300000, guid: bc62fd58b7fe4d44a90c5fc91e307467, type: 3}
 --- !u!114 &377776934
 MonoBehaviour:
   m_ObjectHideFlags: 0

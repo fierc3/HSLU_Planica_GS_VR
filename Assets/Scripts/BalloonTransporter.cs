@@ -55,18 +55,42 @@ public class BalloonTransporter : MonoBehaviour
     [SerializeField]
     private CanvasGroup travelIndicator;
 
+    // Sounds
+    [SerializeField]
+    private AudioClip changeDestinationAudioClip;
+    [SerializeField]
+    private AudioClip confirmAudioClip;
+    [SerializeField]
+    private AudioClip moveSound;
+    [SerializeField]
+    private AudioClip directionChangeSound;
+
+    private Vector3 lastPosition;
+    private bool hasMoved = false;
+
+
     // Start is called before the first frame update
     void Start()
     {
         this.globals = GameObject.FindGameObjectWithTag("Globals").GetComponent<Globals>();
         var activeScene = UnityEngine.SceneManagement.SceneManager.GetActiveScene();
         locations = locations.Where(x => !x.id.Equals(activeScene.name)).ToList();
+        sceneName = locations[active].id;
         UpdateScreen();
+        lastPosition = transform.position;
     }
 
     // Update is called once per frame
     void Update()
     {
+        if (!hasMoved && transform.position != lastPosition)
+        {
+            hasMoved = true;
+            SoundManager.Instance.PlaySound(moveSound, transform.parent, 1.5f);
+            StartCoroutine(PlaySoundEvery15Seconds());
+            lastPosition = transform.position;
+        }
+
         if (isGoing) return;
 
         if (Input.GetKeyDown(KeyCode.LeftArrow))
@@ -102,6 +126,7 @@ public class BalloonTransporter : MonoBehaviour
         Debug.Log("Next: " + active);
         active = (active + 1) % locations.Count();
         sceneName = locations[active].id;
+        SoundManager.Instance.PlaySound(changeDestinationAudioClip, transform, 0.7f);
         UpdateScreen();
     }
 
@@ -110,6 +135,7 @@ public class BalloonTransporter : MonoBehaviour
         Debug.Log("Previous: " + active);
         active = (active - 1 + locations.Count) % locations.Count;
         sceneName = locations[active].id;
+        SoundManager.Instance.PlaySound(changeDestinationAudioClip, transform, 0.7f);
         UpdateScreen();
     }
 
@@ -119,7 +145,6 @@ public class BalloonTransporter : MonoBehaviour
         description.SetText(locations[active].additionalText);
         image.sprite = locations[active].image;
     }
-
 
     public void GoToScene()
     {
@@ -131,6 +156,8 @@ public class BalloonTransporter : MonoBehaviour
 
         isGoing = true;
         travelIndicator.gameObject.SetActive(true);
+        SoundManager.Instance.PlaySound(confirmAudioClip, transform, 0.7f);
+        SoundManager.Instance.PlaySound(directionChangeSound, transform.parent, 1.2f);
 
         if (this.splineAnimate == null)
         {
@@ -202,5 +229,14 @@ public class BalloonTransporter : MonoBehaviour
         EventManager.HideComplete -= OnHidden;
         Debug.Log("OnHidden for " + sceneName);
         EventManager.FireSwitchSceneEvent(sceneName);
+    }
+
+    private IEnumerator PlaySoundEvery15Seconds()
+    {
+        while (true)
+        {
+            yield return new WaitForSeconds(15f);
+            SoundManager.Instance.PlaySound(moveSound, transform.parent, 1.5f);
+        }
     }
 }

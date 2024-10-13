@@ -14,6 +14,9 @@ public class SceneTutorial : MonoBehaviour
     [SerializeField]
     private VolPlayer PostTutorialVolumetricVideo;
 
+    [SerializeField]
+    private AudioClip buttonClickSound;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -41,6 +44,7 @@ public class SceneTutorial : MonoBehaviour
     {
         Debug.Log("Confirm button pressed");
         FinishTutorial();
+        SoundManager.Instance.PlaySound(buttonClickSound, transform);
     }
 
     public void FinishTutorial()

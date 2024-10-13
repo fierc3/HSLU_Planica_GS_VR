@@ -1000,6 +1000,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   category: 0
   PostTutorialVolumetricVideo: {fileID: 0}
+  buttonClickSound: {fileID: 8300000, guid: bc62fd58b7fe4d44a90c5fc91e307467, type: 3}
 --- !u!223 &7678532649092732022 stripped
 Canvas:
   m_CorrespondingSourceObject: {fileID: 4015128326712939850, guid: fd28f23af44f73f4a95e33435872ad15, type: 3}
