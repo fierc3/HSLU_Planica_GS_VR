@@ -54,6 +54,7 @@ public class HoverboardController : MonoBehaviour
         }
         transform.localPosition = originalPosition;
         isSwaying = false;
+        this.gameObject.SetActive(false);
     }
 
     void Update()

@@ -11,6 +11,8 @@ GameObject:
   - component: {fileID: 5573201691302546467}
   - component: {fileID: 3385158218149779066}
   - component: {fileID: 4576165225008520449}
+  - component: {fileID: 16544044598076889}
+  - component: {fileID: 5097447698031336282}
   m_Layer: 0
   m_Name: Managers
   m_TagString: Untagged
@@ -57,3 +59,30 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ecdd45de99f88be46b92ce4dc5f14c63, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &16544044598076889
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2697267593366450729}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e6137b2a6be24bb4786bcca7f69a6b77, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &5097447698031336282
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2697267593366450729}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1a6007b09c23a1d49815703f2a54f2cf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  flyingMusic: {fileID: 8300000, guid: fbc98892ab718454fa613a148d64cb0d, type: 3}
+  groundMusic: {fileID: 8300000, guid: 617c562036e4615448055083a15e5082, type: 3}
+  interactiveMusic: {fileID: 8300000, guid: 6c29e758f2074ea41885b7f1414cebff, type: 3}

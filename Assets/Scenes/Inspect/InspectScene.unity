@@ -5281,6 +5281,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1922924507011207192, guid: 8a508e10b9cf32149927a7dfa5300bb7, type: 3}
+      propertyPath: sceneName
+      value: OverviewScene
+      objectReference: {fileID: 0}
+    - target: {fileID: 1922924507011207192, guid: 8a508e10b9cf32149927a7dfa5300bb7, type: 3}
+      propertyPath: buttonClickSound
+      value: 
+      objectReference: {fileID: 8300000, guid: 2c9d1881558c23245b7d91b699e70f1b, type: 3}
     - target: {fileID: 2818092658883551626, guid: 8a508e10b9cf32149927a7dfa5300bb7, type: 3}
       propertyPath: m_Name
       value: ExitButton
