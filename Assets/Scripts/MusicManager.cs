@@ -29,6 +29,8 @@ public class MusicManager : MonoBehaviour
 
     private void OnSceneLoaded(Scene scene, LoadSceneMode mode)
     {
+        if (audioSource == null) return;
+
         // Check the scene name or index and play the corresponding music
         AudioClip newMusicClip = GetMusicForScene(scene.name);
         if (newMusicClip != null && audioSource.clip != newMusicClip)
