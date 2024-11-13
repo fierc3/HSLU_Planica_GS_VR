@@ -1499,7 +1499,7 @@ PrefabInstance:
     - target: {fileID: 4071792181905690997, guid: 7740c0c615b65c8439e4835b33835add, type: 3}
       propertyPath: m_VideoClip
       value: 
-      objectReference: {fileID: 32900000, guid: 25002368195f9624ca7927222fb11abb, type: 3}
+      objectReference: {fileID: 32900000, guid: 6cb29d53c55516746af3f0d4f2c1eb31, type: 3}
     - target: {fileID: 4071792181905690997, guid: 7740c0c615b65c8439e4835b33835add, type: 3}
       propertyPath: m_PlayOnAwake
       value: 0
@@ -1960,7 +1960,7 @@ PrefabInstance:
     - target: {fileID: 4071792181905690997, guid: 7740c0c615b65c8439e4835b33835add, type: 3}
       propertyPath: m_VideoClip
       value: 
-      objectReference: {fileID: 32900000, guid: 820236f9b9266084b92e14ca4192670b, type: 3}
+      objectReference: {fileID: 32900000, guid: daa0dac0946f9074981e02d465f360fc, type: 3}
     - target: {fileID: 4071792181905690997, guid: 7740c0c615b65c8439e4835b33835add, type: 3}
       propertyPath: m_PlayOnAwake
       value: 0
@@ -2298,7 +2298,7 @@ PrefabInstance:
     - target: {fileID: 4071792181905690997, guid: 7740c0c615b65c8439e4835b33835add, type: 3}
       propertyPath: m_VideoClip
       value: 
-      objectReference: {fileID: 32900000, guid: 2b162cc20b211374a847d5145211a509, type: 3}
+      objectReference: {fileID: 32900000, guid: 39ef9c47093c69b48ab574df79d4e2f4, type: 3}
     - target: {fileID: 4071792181905690997, guid: 7740c0c615b65c8439e4835b33835add, type: 3}
       propertyPath: m_PlayOnAwake
       value: 0
@@ -2375,7 +2375,7 @@ PrefabInstance:
     - target: {fileID: 4071792181905690997, guid: 7740c0c615b65c8439e4835b33835add, type: 3}
       propertyPath: m_VideoClip
       value: 
-      objectReference: {fileID: 32900000, guid: 9416b84c3492dc04895f6321bc728689, type: 3}
+      objectReference: {fileID: 32900000, guid: febfb2fb588d49b418913954476b2e50, type: 3}
     - target: {fileID: 4071792181905690997, guid: 7740c0c615b65c8439e4835b33835add, type: 3}
       propertyPath: m_PlayOnAwake
       value: 0
@@ -3082,7 +3082,7 @@ PrefabInstance:
     - target: {fileID: 4071792181905690997, guid: 7740c0c615b65c8439e4835b33835add, type: 3}
       propertyPath: m_VideoClip
       value: 
-      objectReference: {fileID: 32900000, guid: f02868ce7780da246ae4e079e281e123, type: 3}
+      objectReference: {fileID: 32900000, guid: 762da808c3b8f594fb9d2d3893bcb6d1, type: 3}
     - target: {fileID: 4071792181905690997, guid: 7740c0c615b65c8439e4835b33835add, type: 3}
       propertyPath: m_PlayOnAwake
       value: 0
@@ -3249,7 +3249,7 @@ PrefabInstance:
     - target: {fileID: 4071792181905690997, guid: 7740c0c615b65c8439e4835b33835add, type: 3}
       propertyPath: m_VideoClip
       value: 
-      objectReference: {fileID: 32900000, guid: 7cd87b641d1d7984d8c0d2f5760fe668, type: 3}
+      objectReference: {fileID: 32900000, guid: 5203f744537bad54eb0e5e9f95a57034, type: 3}
     - target: {fileID: 4071792181905690997, guid: 7740c0c615b65c8439e4835b33835add, type: 3}
       propertyPath: m_PlayOnAwake
       value: 0
