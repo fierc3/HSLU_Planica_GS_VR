@@ -16,8 +16,7 @@ public class BalloonTransporter : MonoBehaviour
     // Teleporting
     Globals globals;
 
-    // read only in inscpetor
-    private string sceneName = "InspectScene";
+    public string sceneName = "InspectScene";
     [SerializeField]
     private int active = 0;
 
@@ -64,6 +63,8 @@ public class BalloonTransporter : MonoBehaviour
     private AudioClip moveSound;
     [SerializeField]
     private AudioClip directionChangeSound;
+    [SerializeField]
+    private AudioClip teleportSound;
 
     private Vector3 lastPosition;
     private bool hasMoved = false;
@@ -167,6 +168,7 @@ public class BalloonTransporter : MonoBehaviour
         this.splineAnimate.Pause();
         StartCoroutine(ShowPortal());
         StartCoroutine(MoveToTarget());
+        portal.gameObject.GetComponent<AudioSource>().Play(); 
     }
 
     private IEnumerator ShowPortal()
@@ -206,6 +208,7 @@ public class BalloonTransporter : MonoBehaviour
 
             if(Vector3.Distance(hotAirBalloon.transform.position, endPosition) < 5)
             {
+                SoundManager.Instance.PlaySound(teleportSound, transform.parent, 1.5f);
                 GoToLocation();
                 yield break;
             }
