@@ -10539,7 +10539,7 @@ MonoBehaviour:
   - id: InspectScene
     text: Inspector
     image: {fileID: 21300000, guid: 0a0559815906a594696e6ad20602c37d, type: 3}
-    additionalText: Inspect all of the inspector as a miniature.
+    additionalText: Inspect all of the locations as a miniature.
   - id: BtsScene
     text: Interview a Climate Expert
     image: {fileID: 21300000, guid: f546ceeabe497b745a699573e3c585fc, type: 3}
