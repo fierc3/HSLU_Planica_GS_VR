@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -31,7 +32,14 @@ public class OneTimeTutorialDistanceBased : MonoBehaviour
             IsCleaningUp = true;
             Debug.Log("Player moved away, time to delete Tutorial");
             //TutorialCanvas.gameObject.transform.parent.gameObject.SetActive(false);
-            TutorialCanvas.GetComponent<SceneTutorial>().FinishTutorial();
+            try
+            {
+                TutorialCanvas.GetComponent<SceneTutorial>().FinishTutorial();
+            }catch (Exception ex)
+            {
+                Time.timeScale = 1.0f;
+                Debug.LogException(ex);
+            }
         }
     }
 }
