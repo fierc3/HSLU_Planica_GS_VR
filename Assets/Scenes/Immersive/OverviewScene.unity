@@ -3918,6 +3918,26 @@ PrefabInstance:
       propertyPath: teleportSound
       value: 
       objectReference: {fileID: 8300000, guid: 40b2ef38454482d49b4e28121bd61a33, type: 3}
+    - target: {fileID: 4360984300616722958, guid: 4896814416a7f0a439c99da6c854955d, type: 3}
+      propertyPath: locations.Array.data[0].additionalText
+      value: Fly around the metal tower located at the top of the ramp (highlighted).
+      objectReference: {fileID: 0}
+    - target: {fileID: 4360984300616722958, guid: 4896814416a7f0a439c99da6c854955d, type: 3}
+      propertyPath: locations.Array.data[1].additionalText
+      value: Explore the Arena on ground level and walk around (highlighted).
+      objectReference: {fileID: 0}
+    - target: {fileID: 4360984300616722958, guid: 4896814416a7f0a439c99da6c854955d, type: 3}
+      propertyPath: locations.Array.data[3].additionalText
+      value: Fly around the round building located at the end of the ramp (highlighted).
+      objectReference: {fileID: 0}
+    - target: {fileID: 4360984300616722958, guid: 4896814416a7f0a439c99da6c854955d, type: 3}
+      propertyPath: locations.Array.data[4].additionalText
+      value: Explore the stage on ground level and walk around (highlighted).
+      objectReference: {fileID: 0}
+    - target: {fileID: 4360984300616722958, guid: 4896814416a7f0a439c99da6c854955d, type: 3}
+      propertyPath: locations.Array.data[5].additionalText
+      value: Fly around the wooden building located at the top of the ramp (highlighted).
+      objectReference: {fileID: 0}
     - target: {fileID: 5241269088104604742, guid: 4896814416a7f0a439c99da6c854955d, type: 3}
       propertyPath: m_CastShadows
       value: 0
