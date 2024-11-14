@@ -212,7 +212,7 @@ public class BalloonTransporter : MonoBehaviour
 
             if(Vector3.Distance(hotAirBalloon.transform.position, endPosition) < 5)
             {
-                SoundManager.Instance.PlaySound(teleportSound, transform.parent, 1.5f);
+                SoundManager.Instance.PlaySound(teleportSound, transform.parent, 0.4f);
                 GoToLocation();
                 yield break;
             }
