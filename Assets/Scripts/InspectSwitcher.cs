@@ -30,6 +30,7 @@ public class InspectSwitcher : MonoBehaviour
         Debug.Log(splats.First().GetComponentInParent<Transform>().name);
         originalPosition = splats.First().transform.parent.parent.transform.position;
         originalRotation = splats.First().transform.parent.parent.transform.rotation;
+        StartCoroutine(DelayedReset());
     }
 
     // Update is called once per frame
@@ -99,5 +100,11 @@ public class InspectSwitcher : MonoBehaviour
         }
 
         isResetting = false;
+    }
+
+    IEnumerator DelayedReset()
+    {
+        yield return new WaitForSeconds(0.33f);
+        ResetSplat();
     }
 }
