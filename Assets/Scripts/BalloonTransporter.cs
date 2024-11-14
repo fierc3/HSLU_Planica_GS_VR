@@ -124,6 +124,8 @@ public class BalloonTransporter : MonoBehaviour
 
     public void Next()
     {
+        if (isGoing) return;
+
         Debug.Log("Next: " + active);
         active = (active + 1) % locations.Count();
         sceneName = locations[active].id;
@@ -133,6 +135,8 @@ public class BalloonTransporter : MonoBehaviour
 
     public void Previous()
     {
+        if(isGoing) return;
+
         Debug.Log("Previous: " + active);
         active = (active - 1 + locations.Count) % locations.Count;
         sceneName = locations[active].id;
@@ -208,7 +212,7 @@ public class BalloonTransporter : MonoBehaviour
 
             if(Vector3.Distance(hotAirBalloon.transform.position, endPosition) < 5)
             {
-                SoundManager.Instance.PlaySound(teleportSound, transform.parent, 1.5f);
+                SoundManager.Instance.PlaySound(teleportSound, transform.parent, 0.4f);
                 GoToLocation();
                 yield break;
             }

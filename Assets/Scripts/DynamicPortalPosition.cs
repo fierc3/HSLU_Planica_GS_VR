@@ -20,7 +20,7 @@ public class DynamicPortalPosition : MonoBehaviour
             return;
         }
 
-        var targetPositon = Vector3.Lerp(position, OgPosition, 0.2f);
+        var targetPositon = Vector3.Lerp(position, OgPosition, 0.33f);
         StartCoroutine(DelayPosition(targetPositon));
     }
 

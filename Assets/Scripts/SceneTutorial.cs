@@ -32,6 +32,7 @@ public class SceneTutorial : MonoBehaviour
                 board.gameObject.SetActive(false);
             }
             Destroy(gameObject);
+            Time.timeScale = 1f;
             return;
         }
 

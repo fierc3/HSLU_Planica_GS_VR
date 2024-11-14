@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -29,13 +30,26 @@ public class MusicManager : MonoBehaviour
 
     private void OnSceneLoaded(Scene scene, LoadSceneMode mode)
     {
-        if (audioSource == null) return;
+        try
+        {       
+            if (audioSource == null) return;
 
-        // Check the scene name or index and play the corresponding music
-        AudioClip newMusicClip = GetMusicForScene(scene.name);
-        if (newMusicClip != null && audioSource.clip != newMusicClip)
+            if (scene.name.ToLower().StartsWith("overview"))
+            {
+                audioSource.Stop();
+                return;
+            }
+
+            // Check the scene name or index and play the corresponding music
+            AudioClip newMusicClip = GetMusicForScene(scene.name);
+            if (newMusicClip != null && audioSource.clip != newMusicClip)
+            {
+                PlayMusic(newMusicClip, 0.05f);
+            }
+        }
+        catch(Exception ex)
         {
-            PlayMusic(newMusicClip, 0.05f);
+            Debug.LogException(ex);
         }
     }
 

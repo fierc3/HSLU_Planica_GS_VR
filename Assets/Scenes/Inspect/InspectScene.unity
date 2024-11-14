@@ -602,6 +602,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: XR Origin (XR Rig) with Transitioner
       objectReference: {fileID: 0}
+    - target: {fileID: 4264765356944954592, guid: 7cd23475eb6993841a2ad0b9f3b6432d, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4487480933735331380, guid: 7cd23475eb6993841a2ad0b9f3b6432d, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0.032

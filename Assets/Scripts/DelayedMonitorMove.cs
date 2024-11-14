@@ -21,6 +21,8 @@ public class DelayedMonitorMove : MonoBehaviour
     [SerializeField]
     private AudioClip moveSound;
 
+    
+
     void Start()
     {
         originalPosition = transform.localPosition;
@@ -30,7 +32,19 @@ public class DelayedMonitorMove : MonoBehaviour
 
     IEnumerator MoveUpAndDown()
     {
-        yield return new WaitForSeconds(upDelay);
+        yield return new WaitForSeconds(1);
+
+        while(Time.timeScale < 1) // this means were still in tutorial mode, very ugly
+        {
+            Debug.Log("Waiting...: ");
+            yield return new WaitForSeconds(1);
+        }
+
+        // either now the VV is playing or it isn't, this dependms on the number of air balloon visits.
+        int VisitsOverview = PlayerPrefs.GetInt(PreferenceCategory.HotAirBalloonVisits.ToString());
+        Debug.Log("Visits Hot Air Balloon: " + VisitsOverview);
+
+        yield return new WaitForSeconds(VisitsOverview > 1 ? 1f : upDelay); // > 1 because by this time it will already be marked as visit 1
 
         if (player.gameObject.activeInHierarchy)
         {
@@ -39,11 +53,14 @@ public class DelayedMonitorMove : MonoBehaviour
             // Move up smoothly
             yield return StartCoroutine(MoveToPosition(targetPosition, moveDuration));
 
+          
+            /*
             yield return new WaitForSeconds(downDelay);
 
             // Move down smoothly
             yield return StartCoroutine(MoveToPosition(originalPosition, moveDuration));
             player.Stop();
+            */
         }
     }
 
