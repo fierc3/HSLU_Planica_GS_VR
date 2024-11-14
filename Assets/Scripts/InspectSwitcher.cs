@@ -14,6 +14,8 @@ public class InspectSwitcher : MonoBehaviour
     [SerializeField]
     int active = 0;
 
+    private bool isResetting = false;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -66,8 +68,36 @@ public class InspectSwitcher : MonoBehaviour
 
     public void ResetSplat()
     {
+        if (isResetting) return;
+
+        isResetting = true;
         Debug.Log("Reseting Splats Container " + originalPosition);
+        //
+        // Get the Rigidbody component
+        Rigidbody rb = splats.First().transform.parent.parent.GetComponent<Rigidbody>();
+
+        // Disable the Rigidbody
+        if (rb != null)
+        {
+            rb.isKinematic = true;
+        }
+
+        // Reset position and rotation
         splats.First().transform.parent.parent.transform.position = originalPosition;
         splats.First().transform.parent.parent.transform.rotation = originalRotation;
+
+        StartCoroutine(StoppingSplat(rb));
+    }
+
+    IEnumerator StoppingSplat(Rigidbody rb)
+    {
+        yield return new WaitForSeconds(0.33f);
+        // Re-enable the Rigidbody
+        if (rb != null)
+        {
+            rb.isKinematic = false;
+        }
+
+        isResetting = false;
     }
 }
