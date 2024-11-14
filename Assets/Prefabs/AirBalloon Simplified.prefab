@@ -10508,6 +10508,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 36351a871fa351b4c9d995be9c3587ad, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  sceneName: InspectScene
   active: 0
   locations:
   - id: MetalTowerScene
@@ -10558,6 +10559,7 @@ MonoBehaviour:
   confirmAudioClip: {fileID: 8300000, guid: 2c9d1881558c23245b7d91b699e70f1b, type: 3}
   moveSound: {fileID: 8300000, guid: 6ac8da17849143d47be2183ff77573d4, type: 3}
   directionChangeSound: {fileID: 8300000, guid: 5d9a36c618a62ed40b387b792373baf0, type: 3}
+  teleportSound: {fileID: 8300000, guid: 85fcc66ecd711244198d0c3ac9854fe8, type: 3}
 --- !u!1 &8554539390653946987
 GameObject:
   m_ObjectHideFlags: 0
