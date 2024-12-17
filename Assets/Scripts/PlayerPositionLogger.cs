@@ -67,7 +67,7 @@ public class PlayerPositionLogger : MonoBehaviour
     {
         logIntervalIndex += logTimer;
 
-        string logEntry = $"{logIntervalIndex},{position.x},{position.y},{UnityEngine.SceneManagement.SceneManager.GetActiveScene().name},{comment}";
+        string logEntry = $"{logIntervalIndex},{position.x},{position.z},{UnityEngine.SceneManagement.SceneManager.GetActiveScene().name},{comment}";
         logEntries.Add(logEntry);
     }
 
