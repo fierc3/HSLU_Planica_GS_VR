@@ -8,7 +8,7 @@ public class PlayerPositionLogger : MonoBehaviour
     private string logFilePath;
     private List<string> logEntries = new List<string>();
     private float writeToDiskInterval = 10f; // Log every 10 seconds
-    private float logInterval = 0.333f; // Log every 1/3 of a second
+    private float logInterval = 0.2f;
     private float logIntervalIndex = 0f;
     private float writeTimer;
     private float logTimer;
