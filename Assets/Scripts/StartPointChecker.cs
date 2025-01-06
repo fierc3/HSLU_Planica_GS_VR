@@ -17,25 +17,6 @@ public class StartPointChecker : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.R)) // Change the key as needed 
-        {
-            var inputSubsystems = new List<XRInputSubsystem>();
-            SubsystemManager.GetInstances(inputSubsystems);
-            Debug.Log("Subsystems: " + inputSubsystems.Count);
-
-            foreach (var subsystem in inputSubsystems)
-            {
-                if (subsystem.TryRecenter())
-                {
-                    Debug.Log("View recentered successfully.");
-                }
-                else
-                {
-                    Debug.LogWarning("Failed to recenter view.");
-                }
-            }
-        }
-
         var distance = 0.5f;
         if(
             Mathf.Abs(head.transform.position.x - this.transform.position.x) > distance

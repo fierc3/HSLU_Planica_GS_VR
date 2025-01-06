@@ -1191,6 +1191,7 @@ GameObject:
   - component: {fileID: 7175091853990657591}
   - component: {fileID: 1306051963012373738}
   - component: {fileID: 5333693392536060496}
+  - component: {fileID: 2610947271399221566}
   m_Layer: 2
   m_Name: XR Origin (XR Rig) with Transitioner
   m_TagString: Player
@@ -1328,6 +1329,19 @@ MonoBehaviour:
   m_AimAssistRequiredSpeed: 0.25
   m_AimAssistPercent: 0.8
   m_AimAssistMaxSpeedPercent: 10
+--- !u!114 &2610947271399221566
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 965474856788737997}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d93c7fb7e42560c4093a88a9fdd735b3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  xrOrigin: {fileID: 8372681589495884823}
 --- !u!1 &1156903040700415758
 GameObject:
   m_ObjectHideFlags: 0
