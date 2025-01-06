@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using Unity.XR.CoreUtils;
 using UnityEngine;
+using UnityEngine.XR;
 
 public class ViewResetter : MonoBehaviour
 {
@@ -20,7 +21,43 @@ public class ViewResetter : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.R)) // Change the key as needed 
         {
             Debug.Log("Resetting");
-            StartCoroutine(Reset());
+            //StartCoroutine(Reset());
+            ResetSubsystem();
+            xrOrigin.transform.localPosition = startPosition;
+            /*
+            InputTracking.Recenter();
+            */
+
+        }
+
+        if (Input.GetKeyDown(KeyCode.X)) // Change the key as needed 
+        {
+            Debug.Log("Restarting");
+            System.Diagnostics.Process.Start(Application.dataPath.Replace("_Data", ".exe")); // Start a new instance of the application
+            Application.Quit(); // Quit the current instance
+
+        }
+
+    }
+
+
+    void ResetSubsystem()
+    {
+        var inputSubsystems = new List<XRInputSubsystem>();
+        SubsystemManager.GetInstances(inputSubsystems);
+        Debug.Log("Subsystems: " + inputSubsystems.Count);
+
+        foreach (var subsystem in inputSubsystems)
+        {
+            Debug.Log(subsystem.ToString());
+            if (subsystem.TryRecenter())
+            {
+                Debug.Log("View recentered successfully.");
+            }
+            else
+            {
+                Debug.LogWarning("Failed to recenter view.");
+            }
         }
     }
 
