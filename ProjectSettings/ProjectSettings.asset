@@ -13,7 +13,7 @@ PlayerSettings:
   useOnDemandResources: 0
   accelerometerFrequency: 60
   companyName: HSLU
-  productName: Planica VR
+  productName: PlanicaVR
   defaultCursor: {fileID: 0}
   cursorHotspot: {x: 0, y: 0}
   m_SplashScreenBackgroundColor: {r: 0.13725491, g: 0.12156863, b: 0.1254902, a: 1}
@@ -136,7 +136,10 @@ PlayerSettings:
   vulkanEnableCommandBufferRecycling: 1
   loadStoreDebugModeEnabled: 0
   bundleVersion: 0.1
-  preloadedAssets: []
+  preloadedAssets:
+  - {fileID: 4206469802684931788, guid: 9cc3e92e5687f044296bfd737f2eee02, type: 2}
+  - {fileID: 11400000, guid: 6cdf0e63ed2b03b4cbd84eef2976bb5b, type: 2}
+  - {fileID: 7947974280430748581, guid: 7d659987485a58941b2268cc733c8d05, type: 2}
   metroInputSource: 0
   wsaTransparentSwapchain: 0
   m_HolographicPauseOnTrackingLoss: 1
