@@ -21,7 +21,15 @@ public class PlayerPositionLogger : MonoBehaviour
     void Start()
     {
         string timestamp = System.DateTime.Now.ToString("yyyyMMdd_HHmmssfff");
-        logFilePath = Path.Combine(Application.persistentDataPath, $"{timestamp}.csv");
+
+        #if UNITY_EDITOR
+                logFilePath = Path.Combine(Application.persistentDataPath, $"{timestamp}.csv");
+        #else
+                logFilePath = Path.Combine(System.AppDomain.CurrentDomain.BaseDirectory, $"{timestamp}.csv");
+        #endif
+
+        Debug.Log("LogFilePath: " + logFilePath);
+
         if (!File.Exists(logFilePath))
         {
             File.Create(logFilePath).Dispose(); // Ensure the file is created and closed
