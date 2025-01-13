@@ -30,12 +30,23 @@ public class ViewResetter : MonoBehaviour
 
         }
 
-        if (Input.GetKeyDown(KeyCode.X)) // Change the key as needed 
+        if (Input.GetKeyDown(KeyCode.N)) // Change the key as needed 
         {
             Debug.Log("Restarting");
             System.Diagnostics.Process.Start(Application.dataPath.Replace("_Data", ".exe")); // Start a new instance of the application
             Application.Quit(); // Quit the current instance
+        }
 
+
+        if (Input.GetKeyDown(KeyCode.X)) // Change the key as needed 
+        {
+            Debug.Log("Exiting");
+            var logger = FindAnyObjectByType<PlayerPositionLogger>();
+            if(logger != null)
+            {
+                logger.ExitLogging(true);
+            }
+            Application.Quit(); // Quit the current instance
         }
 
     }
