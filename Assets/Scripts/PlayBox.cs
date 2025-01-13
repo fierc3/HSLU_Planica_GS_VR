@@ -7,24 +7,45 @@ public class PlayBox : MonoBehaviour
 {
     [SerializeField] 
     private VideoPlayer videoPlayer;
+    private GameObject head;
+    private Collider playBoxCollider;
 
-    private void OnTriggerEnter(Collider other)
+    void Start()
     {
-        if (videoPlayer == null)
+        if(videoPlayer == null)
         {
+            Debug.Log("No video player assigned, will ignore PlayBox");
             return;
         }
 
-        videoPlayer.Play();
+        head = GameObject.FindGameObjectWithTag("MainCamera");
+        playBoxCollider = GetComponent<Collider>();
+        StartCoroutine(CheckHeadPosition());
     }
 
-    private void OnTriggerExit(Collider other)
-    {
-        if (videoPlayer == null)
-        {
-            return;
-        }
 
-        videoPlayer.Stop();
+    IEnumerator CheckHeadPosition()
+    {
+        while (true)
+        {
+            yield return new WaitForSeconds(0.5f);
+            if (playBoxCollider.bounds.Contains(head.transform.position))
+            {
+                // Head is inside the collider
+                if (!videoPlayer.isPlaying)
+                {
+                    videoPlayer.Play();
+                }
+            }
+            else
+            {
+                // Head is outside the collider
+                if (videoPlayer.isPlaying)
+                {
+                    videoPlayer.Stop();
+                }
+            }
+        }
     }
 }
+
