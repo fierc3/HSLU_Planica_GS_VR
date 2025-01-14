@@ -21,10 +21,10 @@ public class ViewResetter : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.R)) // Change the key as needed 
         {
             Debug.Log("Resetting");
-            //StartCoroutine(Reset());
+            StartCoroutine(Reset());
             ResetSubsystem();
-            xrOrigin.transform.localPosition = startPosition;
             /*
+            xrOrigin.transform.localPosition = startPosition;
             InputTracking.Recenter();
             */
 
@@ -81,3 +81,4 @@ public class ViewResetter : MonoBehaviour
         xrOrigin.RequestedTrackingOriginMode = XROrigin.TrackingOriginMode.Device;
     }
 }
+
