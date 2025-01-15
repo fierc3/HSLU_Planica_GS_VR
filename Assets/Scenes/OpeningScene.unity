@@ -2373,21 +2373,25 @@ PrefabInstance:
       propertyPath: resetTrackerOnLoad
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 1615142854669408642, guid: 7cd23475eb6993841a2ad0b9f3b6432d, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3390369947204604588, guid: 7cd23475eb6993841a2ad0b9f3b6432d, type: 3}
       propertyPath: m_Name
       value: XR Origin (XR Rig) with Transitioner
       objectReference: {fileID: 0}
     - target: {fileID: 4487480933735331380, guid: 7cd23475eb6993841a2ad0b9f3b6432d, type: 3}
       propertyPath: m_LocalScale.x
-      value: 0.7
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4487480933735331380, guid: 7cd23475eb6993841a2ad0b9f3b6432d, type: 3}
       propertyPath: m_LocalScale.y
-      value: 0.7
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4487480933735331380, guid: 7cd23475eb6993841a2ad0b9f3b6432d, type: 3}
       propertyPath: m_LocalScale.z
-      value: 0.7
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4487480933735331380, guid: 7cd23475eb6993841a2ad0b9f3b6432d, type: 3}
       propertyPath: m_LocalPosition.x
@@ -2395,7 +2399,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4487480933735331380, guid: 7cd23475eb6993841a2ad0b9f3b6432d, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.287
+      value: 0.225
       objectReference: {fileID: 0}
     - target: {fileID: 4487480933735331380, guid: 7cd23475eb6993841a2ad0b9f3b6432d, type: 3}
       propertyPath: m_LocalPosition.z
@@ -2433,9 +2437,17 @@ PrefabInstance:
       propertyPath: m_ConstrainProportionsScale
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 5848647750349940330, guid: 7cd23475eb6993841a2ad0b9f3b6432d, type: 3}
+      propertyPath: isHotAirBalloon
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7496634887004685646, guid: 7cd23475eb6993841a2ad0b9f3b6432d, type: 3}
       propertyPath: m_LocalPosition.y
       value: 0.185
+      objectReference: {fileID: 0}
+    - target: {fileID: 7563770604075223498, guid: 7cd23475eb6993841a2ad0b9f3b6432d, type: 3}
+      propertyPath: m_CameraYOffset
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
