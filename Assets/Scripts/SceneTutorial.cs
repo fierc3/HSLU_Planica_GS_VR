@@ -43,7 +43,6 @@ public class SceneTutorial : MonoBehaviour
 
     public void ConfirmButtonPressed()
     {
-        Debug.Log("Confirm button pressed");
         FinishTutorial();
         SoundManager.Instance.PlaySound(buttonClickSound, transform);
     }

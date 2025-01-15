@@ -135,7 +135,7 @@ PlayerSettings:
   vulkanEnableLateAcquireNextImage: 0
   vulkanEnableCommandBufferRecycling: 1
   loadStoreDebugModeEnabled: 0
-  bundleVersion: 0.1
+  bundleVersion: 1.1
   preloadedAssets:
   - {fileID: 4206469802684931788, guid: 9cc3e92e5687f044296bfd737f2eee02, type: 2}
   - {fileID: 11400000, guid: 6cdf0e63ed2b03b4cbd84eef2976bb5b, type: 2}
@@ -159,7 +159,7 @@ PlayerSettings:
   androidSupportedAspectRatio: 1
   androidMaxAspectRatio: 2.1
   applicationIdentifier:
-    Standalone: com.HSLU.Planica-VR
+    Standalone: com.HSLU.PlanicaVR
   buildNumber:
     Bratwurst: 0
     Standalone: 0
@@ -281,7 +281,14 @@ PlayerSettings:
   AndroidMinifyDebug: 0
   AndroidValidateAppBundleSize: 1
   AndroidAppBundleSizeToValidate: 150
-  m_BuildTargetIcons: []
+  m_BuildTargetIcons:
+  - m_BuildTarget: 
+    m_Icons:
+    - serializedVersion: 2
+      m_Icon: {fileID: 2800000, guid: 73577418594c94341853f4a93495f37f, type: 3}
+      m_Width: 128
+      m_Height: 128
+      m_Kind: 0
   m_BuildTargetPlatformIcons:
   - m_BuildTarget: iPhone
     m_Icons:

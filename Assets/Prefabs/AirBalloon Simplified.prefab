@@ -1208,7 +1208,7 @@ Transform:
   m_GameObject: {fileID: 965474856788737997}
   serializedVersion: 2
   m_LocalRotation: {x: -0.0000000018626449, y: 0.05417826, z: 9.3132246e-10, w: 0.99853134}
-  m_LocalPosition: {x: 0.024, y: 0.22, z: -0.011}
+  m_LocalPosition: {x: 0, y: 0.438, z: 0}
   m_LocalScale: {x: 2, y: 2, z: 2}
   m_ConstrainProportionsScale: 1
   m_Children:
@@ -1343,6 +1343,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   xrOrigin: {fileID: 8372681589495884823}
   startPosition: {x: 0, y: 0, z: 0}
+  isHotAirBalloon: 1
 --- !u!1 &1156903040700415758
 GameObject:
   m_ObjectHideFlags: 0

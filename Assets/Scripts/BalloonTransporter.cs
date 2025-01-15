@@ -18,7 +18,7 @@ public class BalloonTransporter : MonoBehaviour
 
     public string sceneName = "InspectScene";
     [SerializeField]
-    private int active = 0;
+    private static int active = 0;
 
     [SerializeField]
     private List<LocationInformation> locations;

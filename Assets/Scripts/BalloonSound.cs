@@ -28,14 +28,12 @@ public class Balloon : MonoBehaviour
         {
             if (currentTime - lastSoundTime >= soundCooldown)
             {
-                Debug.Log("+++MOVE SOUND: " + currentTime);
                 SoundManager.Instance.PlaySound(moveSound, childTransform);
                 lastSoundTime = currentTime;
             }
 
             if (HasDirectionChanged(currentPosition))
             {
-                Debug.Log("+++DIRECTION SOUND: " + currentTime);
                 SoundManager.Instance.PlaySound(directionChangeSound, childTransform);
                 lastSoundTime = currentTime;
             }

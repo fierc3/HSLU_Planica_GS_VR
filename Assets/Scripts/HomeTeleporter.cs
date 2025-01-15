@@ -21,7 +21,6 @@ public class HomeTeleporter : MonoBehaviour
 
         var rightHandDevices = new List<UnityEngine.XR.InputDevice>();
         UnityEngine.XR.InputDevices.GetDevicesAtXRNode(UnityEngine.XR.XRNode.RightHand, rightHandDevices);
-        Debug.Log("HMM LOKING " + rightHandDevices.Count);
 
         if (rightHandDevices.Count == 1)
         {

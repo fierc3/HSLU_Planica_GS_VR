@@ -13,13 +13,11 @@ public class SceneManager : MonoBehaviour
 
     void StartScene(Scene scene, LoadSceneMode m)
     {
-        Debug.Log("Reveal");
         EventManager.FireRevealEvent();
     }
 
     private void OnEnable()
     {
-        Debug.Log("On Enable Scene Manager");
         EventManager.SwitchScene += SwitchSceneHandler;
         UnityEngine.SceneManagement.SceneManager.sceneLoaded += StartScene;
     }
@@ -32,7 +30,6 @@ public class SceneManager : MonoBehaviour
 
     private void SwitchSceneHandler(string sceneName)
     {
-        Debug.Log("Should switch scenes now to " + sceneName);
         UnityEngine.SceneManagement.SceneManager.LoadScene(sceneName, LoadSceneMode.Single);
     }
 }

@@ -34,7 +34,10 @@ public class OneTimeTutorialDistanceBased : MonoBehaviour
             //TutorialCanvas.gameObject.transform.parent.gameObject.SetActive(false);
             try
             {
-                TutorialCanvas.GetComponent<SceneTutorial>().FinishTutorial();
+                if(TutorialCanvas != null)
+                {
+                    TutorialCanvas.GetComponent<SceneTutorial>().FinishTutorial();
+                }
             }catch (Exception ex)
             {
                 Time.timeScale = 1.0f;
