@@ -37,27 +37,9 @@ public class ViewResetter : MonoBehaviour
 
     void OnTrackingOriginUpdated(XRInputSubsystem subsystem)
     {
+        // We keep this for debugging purposes
         var current = subsystem.GetTrackingOriginMode();
         Debug.Log("CurrentMode: " + current);
-        Debug.Log("previousTrackingMode: " + previousTrackingMode);
-        Debug.Log("xrOrigin.CameraYOffset" + xrOrigin.CameraYOffset);
-        Debug.Log("xrOrigin.GetCameraFloorWorldPosition();" + xrOrigin.GetCameraFloorWorldPosition());
-
-
-        //xrOrigin.Camera.transform.localPosition = new Vector3(Camera.main.transform.localPosition.x, 0.2f, Camera.main.transform.localPosition.z);
-        if (previousTrackingMode == TrackingOriginModeFlags.Floor && current == TrackingOriginModeFlags.Floor && isInitialized)
-        {
-            // This must be a quest link triggered reset, because we switch between floor and device
-            // Your custom logic here
-            Debug.Log("N0 OnTrackingOriginUpdated: " + xrOrigin.transform.localPosition);
-            Debug.Log("N0 OnTrackingOriginUpdated: " + xrOrigin.transform.localScale);
-            // Debug.Log("N0 OnTrackingOriginUpdated: " + subsystem.);
-
-            Debug.Log("Tracking origin updated (recentered). " + xrOrigin.CurrentTrackingOriginMode);
-        }
-           //xrOrigin.RequestedTrackingOriginMode = XROrigin.TrackingOriginMode.Floor;
-           // xrOrigin.MoveCameraToWorldLocation(new Vector3(startPosition.x, xrOrigin.Camera.transform.position.y, startPosition.z));
-        previousTrackingMode = current;
     }
 
     XRInputSubsystem GetXRInputSubsystem()
@@ -67,16 +49,9 @@ public class ViewResetter : MonoBehaviour
         return subsystems.FirstOrDefault();
     }
 
-
-    private void Awake()
-    {
-        Debug.Log("N0 wake: " + xrOrigin.transform.position);  
-    }
-
     void Start()
     {
         startPosition = xrOrigin.transform.position;
-        Debug.Log("N0 Start: " + xrOrigin.transform.position);
     }
 
     void Update()
@@ -140,7 +115,6 @@ public class ViewResetter : MonoBehaviour
 
     private IEnumerator InitializeCoroutine()
     {
-        Debug.Log("Reiniting floor mode");
         xrOrigin.RequestedTrackingOriginMode = XROrigin.TrackingOriginMode.Device;
         yield return new WaitForSeconds(0.1f);
         xrOrigin.RequestedTrackingOriginMode = XROrigin.TrackingOriginMode.Floor;
@@ -149,8 +123,6 @@ public class ViewResetter : MonoBehaviour
         {
             Vector3 parentPosition = transform.parent.position; // Assuming the moving object is the parent
             Vector3 targetPosition = new Vector3(parentPosition.x, xrOrigin.transform.position.y + xrOrigin.CameraInOriginSpaceHeight, parentPosition.z);
-            Debug.Log("Parent Position: " + parentPosition);
-            Debug.Log("Target Position: " + targetPosition);
             xrOrigin.MoveCameraToWorldLocation(targetPosition);
             xrOrigin.Camera.transform.localPosition = Vector3.zero; // Reset camera's local position
         }

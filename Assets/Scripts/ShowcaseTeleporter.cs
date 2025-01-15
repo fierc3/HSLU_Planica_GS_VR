@@ -39,7 +39,6 @@ public class ShowcaseTeleporter : MonoBehaviour
     private void OnHidden ()
     {
         EventManager.HideComplete -= OnHidden;
-        Debug.Log("OnHidden for " + sceneName);
         EventManager.FireSwitchSceneEvent(sceneName);
     }
 }

@@ -40,7 +40,6 @@ public class TransitionManager : MonoBehaviour
     private void RevealPlayerHandler()
     {
         globals.Mode = Mode.NonInteractive;
-        Debug.Log("stargin reveal animation");
         if (SkipTransition)
         {
             StartCoroutine(PlayAnimation(1f, 1.1f));
