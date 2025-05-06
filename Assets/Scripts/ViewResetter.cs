@@ -5,8 +5,6 @@ using Unity.XR.CoreUtils;
 using UnityEngine;
 using UnityEngine.XR;
 using UnityEngine.XR.OpenXR;
-using UnityEngine.XR.Interaction.Toolkit.Utilities;
-using UnityEngine.SocialPlatforms;
 
 public class ViewResetter : MonoBehaviour
 {
@@ -14,7 +12,6 @@ public class ViewResetter : MonoBehaviour
     public Vector3 startPosition;
     public bool isHotAirBalloon = true;
     private bool isInitialized;
-    private TrackingOriginModeFlags previousTrackingMode = TrackingOriginModeFlags.Unknown;
 
     void OnEnable()
     {
@@ -73,11 +70,14 @@ public class ViewResetter : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.N))
         {
             Debug.Log("Restarting");
+
+            /*
             var logger = FindAnyObjectByType<PlayerPositionLogger>();
             if (logger != null)
             {
                 logger.ExitLogging(true);
             }
+            */
             System.Diagnostics.Process.Start(Application.dataPath.Replace("_Data", ".exe")); // Start a new instance of the application
             Application.Quit(); // Quit the current instance
         }
@@ -86,11 +86,13 @@ public class ViewResetter : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.X))
         {
             Debug.Log("Exiting");
+            /*
             var logger = FindAnyObjectByType<PlayerPositionLogger>();
             if(logger != null)
             {
                 logger.ExitLogging(true);
             }
+            */
             Application.Quit(); // Quit the current instance
         }
 
