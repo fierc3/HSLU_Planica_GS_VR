@@ -2,7 +2,6 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using TMPro;
-using Unity.XR.Oculus;
 using UnityEngine;
 using UnityEngine.Splines;
 using UnityEngine.UI;
