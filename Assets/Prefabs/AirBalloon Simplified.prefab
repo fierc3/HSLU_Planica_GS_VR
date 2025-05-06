@@ -10525,12 +10525,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   sceneName: InspectScene
-  active: 0
   locations:
   - id: MetalTowerScene
-    text: 'Location: Metal Tower'
+    text: 'Location: Judges'' Watchtower'
     image: {fileID: 21300000, guid: af4d30c623015124d89f80d254851c4c, type: 3}
-    additionalText: Fly around the metal tower located at the top of the ramp.
+    additionalText: Fly around the iconic metal tower where judges oversee ski flying
+      events from multiple platforms.
   - id: ArenaScene
     text: 'Location: Arena'
     image: {fileID: 21300000, guid: d50116a3cbfd3b840ae6eb221a97b7f7, type: 3}
@@ -10541,17 +10541,19 @@ MonoBehaviour:
     additionalText: Go back to the initial ramp location and fly around with the
       hot air balloon.
   - id: RoundBuildingScene
-    text: 'Location: Round Building'
+    text: 'Location: Planica Dome'
     image: {fileID: 21300000, guid: b547768a2632aa940b0a5339e03563ba, type: 3}
-    additionalText: Fly around the round building located at the end of the ramp.
+    additionalText: Fly around the circular heart of Planica, home to exhibitions,
+      offices, and the rich history of ski flying.
   - id: StageScene
     text: 'Location: Stage'
     image: {fileID: 21300000, guid: 9978e70c462aa8d46af6266d333f5726, type: 3}
     additionalText: Explore the stage on ground level and walk around.
   - id: WoodenBuildingScene
-    text: 'Location: Wooden Building'
+    text: 'Location: Commentary Cabin'
     image: {fileID: 21300000, guid: b27a1cbd4c4dadb4cb3696f3dcdb30c4, type: 3}
-    additionalText: Fly around the wooden building located at the top of the ramp.
+    additionalText: Fly around the wooden commentary tower where judges, reporters,
+      and broadcasters follow the ski flying action.
   - id: InspectScene
     text: Inspector
     image: {fileID: 21300000, guid: 0a0559815906a594696e6ad20602c37d, type: 3}
