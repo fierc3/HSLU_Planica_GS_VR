@@ -1,7 +1,6 @@
 using System;
 using System.Collections.Generic;
 using System.IO;
-using System.Threading;
 using UnityEngine;
 
 public class PlayerPositionLogger : MonoBehaviour
@@ -40,7 +39,7 @@ public class PlayerPositionLogger : MonoBehaviour
         UnityEngine.SceneManagement.SceneManager.sceneLoaded += OnSceneLoaded;
         FindPlayerHead();
         AddLogEntry(player.transform.position, "Experience started, will log after Tutorial");
-    }   
+    }
 
     void Update()
     {
